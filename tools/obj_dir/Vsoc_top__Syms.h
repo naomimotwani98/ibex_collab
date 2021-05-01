@@ -4,8 +4,8 @@
 // Internal details; most calling programs do not need this header,
 // unless using verilator public meta comments.
 
-#ifndef _VSOC_TOP__SYMS_H_
-#define _VSOC_TOP__SYMS_H_  // guard
+#ifndef VERILATED_VSOC_TOP__SYMS_H_
+#define VERILATED_VSOC_TOP__SYMS_H_  // guard
 
 #include "verilated_heavy.h"
 
@@ -21,6 +21,7 @@ class Vsoc_top__Syms : public VerilatedSyms {
     // LOCAL STATE
     const char* __Vm_namep;
     bool __Vm_activity;  ///< Used by trace routines to determine change occurred
+    uint32_t __Vm_baseCode;  ///< Used by trace routines when tracing multiple models
     bool __Vm_didInit;
     
     // SUBCELL STATE
@@ -29,12 +30,11 @@ class Vsoc_top__Syms : public VerilatedSyms {
     Vsoc_top_rv_plic_reg_pkg       TOP__rv_plic_reg_pkg;
     
     // CREATORS
-    Vsoc_top__Syms(Vsoc_top* topp, const char* namep);
-    ~Vsoc_top__Syms() {}
+    Vsoc_top__Syms(VerilatedContext* contextp, Vsoc_top* topp, const char* namep);
+    ~Vsoc_top__Syms();
     
     // METHODS
     inline const char* name() { return __Vm_namep; }
-    inline bool getClearActivity() { bool r=__Vm_activity; __Vm_activity=false; return r; }
     
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 

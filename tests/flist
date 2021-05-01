@@ -31,6 +31,7 @@ $IBEX_COLLAB/src/ibex/rtl/ibex_alu.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_compressed_decoder.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_controller.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_core.v
+$IBEX_COLLAB/src/ibex/rtl/ibex_top.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_counter.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_cs_registers.v
 $IBEX_COLLAB/src/ibex/rtl/ibex_csr.v

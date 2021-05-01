@@ -93,6 +93,9 @@ module soc_top(
    u_top (
       .clk_i  (clk_i),
       .rst_ni (rst_ni),
+      .ram_cfg_i (1'b1),
+      .scan_rst_ni (),
+      .crash_dump_o (),
 
       // instruction memory interface 
       .tl_i_i (xbar_to_ifu),
@@ -102,7 +105,7 @@ module soc_top(
       .tl_d_i (xbar_to_lsu),
       .tl_d_o (lsu_to_xbar),
 
-      // .test_en_i   (1'b0),     // enable all clock gates for testing
+      .test_en_i   (1'b1),     // enable all clock gates for testing
 
       .hart_id_i   (32'b0), 
       .boot_addr_i (32'h20000000),
@@ -112,13 +115,13 @@ module soc_top(
       .irq_timer_i    (intr_timer),
       .irq_external_i (intr_req),
       .irq_fast_i     (1'b0),
-      .irq_nm_i       (1'b0)       // non-maskeable interrupt
+      .irq_nm_i       (1'b0),       // non-maskeable interrupt
 
       // CPU Control Signals
-      // .fetch_enable_i (1'b1),
-      // .alert_minor_o  (),
-      // .alert_major_o  (),
-      // .core_sleep_o   ()
+      .fetch_enable_i (1'b1),
+      .alert_minor_o  (),
+      .alert_major_o  (),
+      .core_sleep_o   ()
   );
 
   //peripheral xbar
@@ -133,6 +136,10 @@ module soc_top(
     .tl_lsu_o  (xbar_to_lsu),
 
     /* Device interfaces */
+  .tl_iccm_o (xbar_to_iccm),
+  .tl_iccm_i (iccm_to_xbar),
+  .tl_dccm_o (xbar_to_dccm),
+  .tl_dccm_i (dccm_to_xbar),
 
     // GPIOs
     .tl_gpio_o  (xbar_to_gpio),

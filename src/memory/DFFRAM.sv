@@ -12,7 +12,7 @@ localparam  DEPTH = 2**($bits(A));
 reg [31:0] mem [0:DEPTH-1];         // 16 KBytes
 
 initial begin
-    $readmemh("/home/zeeshan/Projects/ibex-collaboration/tests/hex/instruction.hex", mem);
+    $readmemh("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/ibex_collab/tests/asm/output/program.hex", mem);
 end
   
 always @(posedge CLK) begin

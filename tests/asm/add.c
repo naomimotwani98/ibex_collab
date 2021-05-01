@@ -5,7 +5,7 @@ int sum(int a, int b);
 
 int main()
 {
-    int a = 50, b = 60;
+    int a = 5, b = 6;
     int c = sum(a,b);
     return 0;
 }

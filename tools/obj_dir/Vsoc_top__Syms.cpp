@@ -9,10 +9,16 @@
 
 
 // FUNCTIONS
-Vsoc_top__Syms::Vsoc_top__Syms(Vsoc_top* topp, const char* namep)
+Vsoc_top__Syms::~Vsoc_top__Syms()
+{
+}
+
+Vsoc_top__Syms::Vsoc_top__Syms(VerilatedContext* contextp, Vsoc_top* topp, const char* namep)
     // Setup locals
-    : __Vm_namep(namep)
+    : VerilatedSyms{contextp}
+    , __Vm_namep(namep)
     , __Vm_activity(false)
+    , __Vm_baseCode(0)
     , __Vm_didInit(false)
     // Setup submodule names
     , TOP__gpio_reg_pkg(Verilated::catName(topp->name(), "gpio_reg_pkg"))

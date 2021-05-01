@@ -23,6 +23,9 @@ module ibex_top_tlul_wrapper #(
 (
   input clk_i,
   input rst_ni,
+  input logic ram_cfg_i,
+  input logic scan_rst_ni,
+  output logic crash_dump_o,
 
   // instruction memory interface 
   input  tlul_pkg::tl_d2h_t tl_i_i,
@@ -69,7 +72,7 @@ import ibex_pkg::*;
   logic [31:0] data_rdata;
   logic        data_err;
 
- ibex_core 
+ ibex_top 
 //#(
 //     .PMPEnable        (1'b0),
 //     .PMPGranularity   (0), 
@@ -95,7 +98,8 @@ import ibex_pkg::*;
     .clk_i (clk_i),
     .rst_ni(rst_ni),
 
-    // .test_en_i (test_en_i),     // enable all clock gates for testing
+    .test_en_i (test_en_i), 
+    .ram_cfg_i (ram_cfg_i),    // enable all clock gates for testing
 
     .hart_id_i  (hart_id_i),
     .boot_addr_i(boot_addr_i),
@@ -159,10 +163,12 @@ import ibex_pkg::*;
 `endif
 
     // // CPU Control Signals
-    // .fetch_enable_i (fetch_enable_i),
-    // .alert_minor_o  (alert_minor_o),
-    // .alert_major_o  (alert_major_o),
-    // .core_sleep_o   (core_sleep_o)
+    .fetch_enable_i (fetch_enable_i),
+    .alert_minor_o  (alert_minor_o),
+    .alert_major_o  (alert_major_o),
+    .core_sleep_o   (core_sleep_o),
+    .crash_dump_o    (crash_dump_o),
+    .scan_rst_ni    (scan_rst_ni)
 );
 
 tlul_host_adapter #(

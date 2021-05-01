@@ -1,4 +1,4 @@
-
+/* verilator lint_off LATCH */
 module xbar_periph (
   input clk_i,
   input rst_ni,
@@ -141,3 +141,4 @@ module xbar_periph (
   );
 
 endmodule
+/* verilator lint_on LATCH */
