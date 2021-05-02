@@ -10,17 +10,94 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
     Vsoc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
-    WData/*159:0*/ __Vtemp335[5];
-    WData/*95:0*/ __Vtemp343[3];
-    WData/*127:0*/ __Vtemp349[4];
-    WData/*479:0*/ __Vtemp359[15];
-    CData/*31:0*/ __Vtemp378;
-    CData/*31:0*/ __Vtemp393;
-    CData/*31:0*/ __Vtemp394;
-    CData/*31:0*/ __Vtemp426;
-    CData/*31:0*/ __Vtemp427;
-    CData/*31:0*/ __Vtemp441;
+    WData/*159:0*/ __Vtemp363[5];
+    WData/*95:0*/ __Vtemp371[3];
+    WData/*127:0*/ __Vtemp377[4];
+    WData/*479:0*/ __Vtemp387[15];
+    CData/*31:0*/ __Vtemp406;
+    CData/*31:0*/ __Vtemp421;
+    CData/*31:0*/ __Vtemp422;
+    CData/*31:0*/ __Vtemp454;
+    CData/*31:0*/ __Vtemp455;
+    CData/*31:0*/ __Vtemp469;
     // Body
+    vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__u_reg_if__DOT__wr_req 
+        = ((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__u_reg_if__DOT__a_ack) 
+           & ((0U == (7U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+                            [1U][2U] >> 0x12U))) | 
+              (1U == (7U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+                            [1U][2U] >> 0x12U)))));
+    vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h 
+        = ((0xffffffffffffeULL & vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h) 
+           | (IData)((IData)((1U & (IData)(vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i)))));
+    vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h 
+        = ((0x8000000000001ULL & vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h 
+        = ((0x7ffffffffffffULL & vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h) 
+           | ((QData)((IData)((1U & (IData)((vlTOPp->soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__tl_t_i 
+                                             >> 0x33U))))) 
+              << 0x33U));
+    vlTOPp->soc_top__DOT__intr_controller__DOT__u_reg__DOT__u_reg_if__DOT__rd_req 
+        = ((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__u_reg__DOT__u_reg_if__DOT__a_ack) 
+           & (4U == (7U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+                           [9U][2U] >> 0x12U))));
+    vlTOPp->soc_top__DOT__intr_controller__DOT__u_reg__DOT__u_reg_if__DOT__wr_req 
+        = ((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__u_reg__DOT__u_reg_if__DOT__a_ack) 
+           & ((0U == (7U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+                            [9U][2U] >> 0x12U))) | 
+              (1U == (7U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+                            [9U][2U] >> 0x12U)))));
+    vlTOPp->soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_d 
+        = vlTOPp->soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_q;
+    if (((IData)(vlTOPp->soc_top__DOT__u_top__DOT__data_req) 
+         & (IData)(vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h))) {
+        vlTOPp->soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_d 
+            = (1U & ((~ (IData)(vlTOPp->soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_q)) 
+                     & ((IData)(1U) + (IData)(vlTOPp->soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_q))));
+    }
+    vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ctrl_update = 0U;
+    if ((1U & (~ ((IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs) 
+                  >> 2U)))) {
+        if ((2U & (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs))) {
+            if ((1U & (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs))) {
+                if ((1U & ((IData)(vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h) 
+                           | (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__pmp_err_q)))) {
+                    vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ctrl_update = 1U;
+                }
+            }
+        } else {
+            if ((1U & (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs))) {
+                if ((1U & ((IData)(vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h) 
+                           | (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__pmp_err_q)))) {
+                    vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ctrl_update = 1U;
+                }
+            } else {
+                if (vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__lsu_req) {
+                    if ((1U & (IData)(vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h))) {
+                        vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ctrl_update = 1U;
+                    }
+                }
+            }
+        }
+    }
     vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__rdata_update = 0U;
     if ((4U & (IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs))) {
         if ((1U & (~ ((IData)(vlTOPp->soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs) 
@@ -1632,7 +1709,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
         = (((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
             & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
            & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err)));
-    __Vtemp335[0U] = (IData)((((QData)((IData)(((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
+    __Vtemp363[0U] = (IData)((((QData)((IData)(((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
                                                   >> 2U) 
                                                  & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
                                                 & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err))))) 
@@ -1659,7 +1736,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                                        >> 5U) 
                                                                       & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
                                                                      & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err))))))))));
-    __Vtemp335[1U] = ((0xfff80000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+    __Vtemp363[1U] = ((0xfff80000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                       [1U][0U] << 0x12U)) 
                       | (IData)(((((QData)((IData)(
                                                    ((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
@@ -1690,7 +1767,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                                           & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
                                                                          & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err))))))))) 
                                  >> 0x20U)));
-    __Vtemp343[0U] = (IData)((((QData)((IData)(((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
+    __Vtemp371[0U] = (IData)((((QData)((IData)(((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
                                                   >> 7U) 
                                                  & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
                                                 & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err))))) 
@@ -1733,7 +1810,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                                            | (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                                                               [1U][0U] 
                                                                               >> 1U)))))))))));
-    __Vtemp343[1U] = ((0xfff80000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+    __Vtemp371[1U] = ((0xfff80000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                       [1U][0U] << 0x12U)) 
                       | (IData)(((((QData)((IData)(
                                                    ((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
@@ -1780,7 +1857,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                                                 [1U][0U] 
                                                                                 >> 1U)))))))))) 
                                  >> 0x20U)));
-    __Vtemp349[3U] = ((0xffc00000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
+    __Vtemp377[3U] = ((0xffc00000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                       [1U][0U] << 0xbU)) 
                       | ((0xffe00000U & ((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
                                            << 0x10U) 
@@ -1803,7 +1880,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                           << 3U)) | 
                                         (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                          [1U][0U] >> 0x1dU)))))));
-    __Vtemp359[0xcU] = ((0xffffffU & ((0x7ffU & ((0x400U 
+    __Vtemp387[0xcU] = ((0xffffffU & ((0x7ffU & ((0x400U 
                                                   & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                                      [1U][1U] 
                                                      << 0xaU)) 
@@ -1835,7 +1912,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                      << 0x20U) | (QData)((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT____Vcellout__u_intr_ctrl_en_falling__q))) 
                    >> 0x20U));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[5U] 
-        = ((0xfffc0000U & (__Vtemp343[0U] << 0x12U)) 
+        = ((0xfffc0000U & (__Vtemp371[0U] << 0x12U)) 
            | ((0xfffe0000U & ((((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
                                 << 8U) & ((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we) 
                                           << 0x11U)) 
@@ -1853,10 +1930,10 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                     & (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_we)) 
                                                    & (~ (IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT__wr_err))))));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[6U] 
-        = ((0x3ffffU & (__Vtemp343[0U] >> 0xeU)) | 
-           (0xfffc0000U & (__Vtemp343[1U] << 0x12U)));
+        = ((0x3ffffU & (__Vtemp371[0U] >> 0xeU)) | 
+           (0xfffc0000U & (__Vtemp371[1U] << 0x12U)));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[7U] 
-        = ((0x3ffffU & (__Vtemp343[1U] >> 0xeU)) | 
+        = ((0x3ffffU & (__Vtemp371[1U] >> 0xeU)) | 
            (0xfffc0000U & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                            [1U][0U] << 4U)));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[8U] 
@@ -1873,23 +1950,23 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                << 4U)) 
                                      | (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                         [1U][0U] >> 0x1cU)))))) 
-           | (0xfffc0000U & (__Vtemp349[3U] << 0x12U)));
+           | (0xfffc0000U & (__Vtemp377[3U] << 0x12U)));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[9U] 
-        = (0xfc0000U | ((0xff000000U & (__Vtemp335[0U] 
+        = (0xfc0000U | ((0xff000000U & (__Vtemp363[0U] 
                                         << 0x18U)) 
-                        | (0x3ffffU & (__Vtemp349[3U] 
+                        | (0x3ffffU & (__Vtemp377[3U] 
                                        >> 0xeU))));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[0xaU] 
-        = ((0xffffffU & (__Vtemp335[0U] >> 8U)) | (0xff000000U 
-                                                   & (__Vtemp335[1U] 
+        = ((0xffffffU & (__Vtemp363[0U] >> 8U)) | (0xff000000U 
+                                                   & (__Vtemp363[1U] 
                                                       << 0x18U)));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[0xbU] 
-        = ((0xffffffU & (__Vtemp335[1U] >> 8U)) | (0xff000000U 
+        = ((0xffffffU & (__Vtemp363[1U] >> 8U)) | (0xff000000U 
                                                    & (vlTOPp->soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d
                                                       [1U][0U] 
                                                       << 0xaU)));
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[0xcU] 
-        = __Vtemp359[0xcU];
+        = __Vtemp387[0xcU];
     vlTOPp->soc_top__DOT__gpio_32__DOT__reg2hw[0xdU] 
         = ((0xffffffU & ((0x7ffU & ((IData)((((QData)((IData)(vlTOPp->soc_top__DOT__gpio_32__DOT__u_reg__DOT____Vcellout__u_intr_state__q)) 
                                               << 0x20U) 
@@ -4912,7 +4989,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                         & (IData)((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0xbU))))))) 
               << 5U));
-    __Vtemp378 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp406 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[3U] 
                                 << 0x18U) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U] 
                                              >> 8U))) 
@@ -4930,7 +5007,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                               << 0x1cU)))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[1U] 
         = ((0xfffffff0U & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[1U]) 
-           | (0x3fffffffU & (__Vtemp378 >> 2U)));
+           | (0x3fffffffU & (__Vtemp406 >> 2U)));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[0U] 
         = ((0xfffc7fffU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[0U]) 
            | (0x38000U & ((((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
@@ -5069,7 +5146,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                         & (IData)((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x15U))))))) 
               << 0xaU));
-    __Vtemp393 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp421 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U] 
                                 << 0x1cU) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U] 
                                              >> 4U))) 
@@ -5091,8 +5168,8 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                     >> 2U)))))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U] 
         = ((0xfffffffcU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U]) 
-           | (0xfffffffU & (__Vtemp393 >> 4U)));
-    __Vtemp394 = (7U & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
+           | (0xfffffffU & (__Vtemp421 >> 4U)));
+    __Vtemp422 = (7U & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
                          & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
                              << 0x1eU) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
                                           >> 2U))) 
@@ -5114,7 +5191,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                     >> 1U)))))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[1U] 
         = ((0xfffffffeU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[1U]) 
-           | (0x3fffffffU & (__Vtemp394 >> 2U)));
+           | (0x3fffffffU & (__Vtemp422 >> 2U)));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
         = ((0x7ffffffffffff7ffULL & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree) 
            | ((QData)((IData)((1U & (((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__4__KET____DOT__gen_nodes__DOT__sel) 
@@ -5433,7 +5510,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                         & (IData)((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x2bU))))))) 
               << 0x15U));
-    __Vtemp426 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp454 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[9U] 
                                 << 0x18U) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[8U] 
                                              >> 8U))) 
@@ -5451,8 +5528,8 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                               << 0x1cU)))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U] 
         = ((0xfffffff0U & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U]) 
-           | (0x3fffffffU & (__Vtemp426 >> 2U)));
-    __Vtemp427 = (7U & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
+           | (0x3fffffffU & (__Vtemp454 >> 2U)));
+    __Vtemp455 = (7U & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
                          & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
                              << 0x1cU) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
                                           >> 4U))) 
@@ -5470,7 +5547,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                               << 0x1eU)))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
         = ((0xfffffffcU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U]) 
-           | (0x7fffffffU & (__Vtemp427 >> 1U)));
+           | (0x7fffffffU & (__Vtemp455 >> 1U)));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
         = ((0x7fffffffffbfffffULL & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree) 
            | ((QData)((IData)((1U & (((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__7__KET____DOT__gen_nodes__DOT__sel) 
@@ -5614,7 +5691,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                         & (IData)((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x35U))))))) 
               << 0x1aU));
-    __Vtemp441 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp469 = (0x3fU & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[0xbU] 
                                 << 0x1cU) | (vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[0xaU] 
                                              >> 4U))) 
@@ -5636,7 +5713,7 @@ void Vsoc_top::_settle__TOP__3(Vsoc_top__Syms* __restrict vlSymsp) {
                                                     >> 2U)))))));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U] 
         = ((0xfffffffcU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U]) 
-           | (0xfffffffU & (__Vtemp441 >> 4U)));
+           | (0xfffffffU & (__Vtemp469 >> 4U)));
     vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
         = ((0xfffe3fffU & vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U]) 
            | (0x1c000U & ((0xffffc000U & (((- (IData)((IData)(vlTOPp->soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 

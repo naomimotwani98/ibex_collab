@@ -28,6 +28,7 @@ VM_CLASSES_FAST += \
 	Vsoc_top \
 	Vsoc_top__1 \
 	Vsoc_top__2 \
+	Vsoc_top__3 \
 	Vsoc_top_rv_plic_reg_pkg \
 	Vsoc_top_gpio_reg_pkg \
 
